@@ -1,8 +1,8 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Mark Youssef
+- **Dot Number**: youssef.74
+- **Due Date**: 2/4/2025
 
 ## Assignment Overview
 
@@ -72,7 +72,7 @@ project. Specifically, students should be able to:
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
 are meant to provide ongoing feedback in the learning process. Therefore,
-the rubric is designed to assess the learning objectives *directly* in a way
+the rubric is designed to assess the learning objectives _directly_ in a way
 that is low stakes—meaning you shouldn't have to worry about the grade. Just
 do good work.
 
@@ -106,11 +106,7 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+Hobbies: Driving, reading classics, coding, watching youtube, learning philosophy, spending time with family.
 
 ## Assignment
 
@@ -157,7 +153,7 @@ format, we can be more confident that your designs will be possible.
     - `NaturalNumber divide(NaturalNumber n)`: divides `this` by `n`, returning
       the remainder
     - ...
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
+  - **Additional Considerations** (_note_: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
       - Yes, basically all OSU components have to be mutable as long as they
@@ -169,7 +165,7 @@ format, we can be more confident that your designs will be possible.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
       - Yes. NaturalNumber is base 10, and we track that in a constant called
-          `RADIX`.
+        `RADIX`.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
       - Yes. The kernel methods `multiplyBy10` and `divideBy10` can be used to
@@ -200,68 +196,79 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
-  - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-  - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
-    answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+- Component Design #1: Garage
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Component to model a garage that stores cars and their behavior in and out of garages and capacity.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - addCar(Car k) - takes a car in and adds it
+    - remove(Car k) - removes a car
+    - capacity() - details current capacity
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
+    - checkGarage(Garage m) - checks capacity of other garages
+    - emptyGarage() - clears current garage
+  - **Additional Considerations** (_note_: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I would say that fits what I am trying to model the best.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - It would rely on a Car class to organize that data type.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I do not think it would because it is more abstract.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I think it is possible to do that for instance emptyGarage can be continual remove method.
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: yt_video
+
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Holds data about a partifular video such as views and uploaded date.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - getViewCount() - retrieves current view count
+    - length() - states length of video
+    - getLikeCount() - gets likes count
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
+    - addOtherVideo(Video t, String statToChange) adds stats of another video
+    - modifyLikes(isAdd, Video t) adds or subtracts likes
+  - **Additional Considerations** (_note_: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I would say that appropriately fits the model of this data type.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I do not think so. I think it would work by itself.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don't think so. It could just begin with zeroes.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I think I can like adding the stats of one video to another like its likes etc.
+
+- Component Design #3: Money Formatter
+  - **Description**:
+    - Collects money data and formats it
+  - **Kernel Methods**:
+    - addFunds(double a, String s) adds funds default dollar bills or specific type like $5 bills s
+    - setFormat(String s) choose what way of displaying money you'd like
+    - takeFunds(double a, String s) takes away funds default dollar bills or specific type like $5 bills s
+  - **Secondary Methods**:
+    - changeCurrency(String s) changes currency and system
+    - howMuchUntil(double a, String s) tells you how much more cash or however you'd like it sorted like specific amount of $5 bills and $20 etc you need until an amount
+  - **Additional Considerations** (_note_: "I don't know" is an acceptable
+    answer for each of the following questions):
+    - Would this component be mutable? Answer and explain:
+      - Yes because the component would be changing constantly.
+    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
+      Answer and explain:
+      - I'm not sure that it needs to but I suppose you can split it up into the money and the formatter.
+    - Would this component need any enums or constants (e.g.,
+      `Program.Instruction`)? Answer and explain:
+      - Probably like a currency system can be a constant.
+    - Can you implement your secondary methods using your kernel methods?
+      Answer, explain, and give at least one example:
+      - I would say that it is possible to use takeFunds and addFunds to do the calculations for howMuchUntil/
 
 ## Post-Assignment
 
