@@ -6,8 +6,6 @@
 
 ## Assignment Overview
 
-<!-- TODO: read the assignment overview then delete this comment -->
-
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
 implement, but your component must fit within the constraints of our software
@@ -28,8 +26,6 @@ detailed feedback, which may help you decide which component to ultimately
 implement.
 
 ## Assignment Checklist
-
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -52,8 +48,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
-
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
 what we're hoping you will learn through this particular aspect of the portfolio
@@ -66,8 +60,6 @@ project. Specifically, students should be able to:
    discipline
 
 ## Assignment Rubric: 10 Points
-
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,19 +98,15 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-Hobbies: Driving, reading classics, coding, watching youtube, learning philosophy, spending time with family.
+Hobbies: Driving, reading classics, coding, watching youtube, learning philosophy, spending time with family. My career goals are to become a full stack developer working on something that is useful to people and the nearby community.
 
 ## Assignment
-
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
 that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
-
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -127,8 +115,6 @@ etc. Make of this whatever seems interesting to you, and keep in mind that
 you're just brainstorming right now. You do not have to commit to anything.
 
 ### Example Component
-
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -201,12 +187,12 @@ will likely refine your design to make your implementation easier to use.
   - **Description**:
     - Component to model a garage that stores cars and their behavior in and out of garages and capacity.
   - **Kernel Methods**:
-    - addCar(Car k) - takes a car in and adds it
-    - remove(Car k) - removes a car
-    - capacity() - details current capacity
+    - void addCar(Car k) - takes a car in and adds it
+    - Car k remove(Car k) - removes a car
+    - void capacity() - details current capacity
   - **Secondary Methods**:
-    - checkGarage(Garage m) - checks capacity of other garages
-    - emptyGarage() - clears current garage
+    - boolean checkGarage(Garage m) - checks capacity of other garages
+    - void emptyGarage() - clears current garage
   - **Additional Considerations** (_note_: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
@@ -226,12 +212,12 @@ will likely refine your design to make your implementation easier to use.
   - **Description**:
     - Holds data about a partifular video such as views and uploaded date.
   - **Kernel Methods**:
-    - getViewCount() - retrieves current view count
-    - length() - states length of video
-    - getLikeCount() - gets likes count
+    - int getViewCount() - retrieves current view count
+    - int length() - states length of video
+    - int getLikeCount() - gets likes count
   - **Secondary Methods**:
-    - addOtherVideo(Video t, String statToChange) adds stats of another video
-    - modifyLikes(isAdd, Video t) adds or subtracts likes
+    - void addOtherVideo(Video t, String statToChange) adds stats of another video to model a youtube channel or get a total statistics of all the videos.
+    - void modifyLikes(isAdd, Video t) adds or subtracts likes
   - **Additional Considerations** (_note_: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
@@ -250,12 +236,12 @@ will likely refine your design to make your implementation easier to use.
   - **Description**:
     - Collects money data and formats it
   - **Kernel Methods**:
-    - addFunds(double a, String s) adds funds default dollar bills or specific type like $5 bills s
-    - setFormat(String s) choose what way of displaying money you'd like
-    - takeFunds(double a, String s) takes away funds default dollar bills or specific type like $5 bills s
+    - void addFunds(double a, String s) adds funds default dollar bills or specific type like $5 bills s
+    - void setFormat(String s) choose what way of displaying money you'd like
+    - double takeFunds(double a, String s) takes away funds default dollar bills or specific type like $5 bills s
   - **Secondary Methods**:
-    - changeCurrency(String s) changes currency and system
-    - howMuchUntil(double a, String s) tells you how much more cash or however you'd like it sorted like specific amount of $5 bills and $20 etc you need until an amount
+    - void changeCurrency(String s) changes currency and system
+    - double howMuchUntil(double a, String s) tells you how much more cash or however you'd like it sorted like specific amount of $5 bills and $20 etc you need until an amount
   - **Additional Considerations** (_note_: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
@@ -276,8 +262,6 @@ The following sections detail everything that you should do once you've
 completed the assignment.
 
 ### Changelog
-
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -316,8 +300,6 @@ of development.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
-
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
 this [Markdown to PDF guide][markdown-to-pdf-guide]. However, PDFs should be
@@ -325,8 +307,6 @@ created for you automatically every time you save, so just double check that
 all your work is there before submitting. For future assignments, you will
 just be submitting a link to a pull request. This will be the only time
 you have to submit any PDFs.
-
-<!-- TODO: upload a PDF of this document and the CHANGELOG to Carmen then delete this comment -->
 
 ### Peer Review
 

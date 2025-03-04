@@ -8,7 +8,7 @@ the following form: YYYY.0M.0D.
 
 ## [2025.02.03]
 
-###
+### Added
 
 - Designed a Garage component
 - Designed a yt_video component
@@ -16,9 +16,16 @@ the following form: YYYY.0M.0D.
 
 ## [2025.02.19]
 
-###
+### Added
 
 - Designed a proof of concept for Garage component
+
+## [2025.03.03]
+
+### Added
+
+- Created an interface for the kernel component
+- Created an enhanced interface
 
 ### Updated
 
