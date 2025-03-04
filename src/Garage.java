@@ -1,73 +1,56 @@
 /**
- *  {@code Garage} represented as a class to store the Strings in the garage.
+ * The {@code Garage} interface represents a garage with a specified size.
+ * It extends the {@code GarageKernel} interface and provides a method to create a garage.
  */
-public class Garage {
+public interface Garage extends GarageKernel {
     /**
-     * The array of Strings to store the cars in the garage.
+     * Empty the garage.
+     * @updates this
+     * @ensures this = <>
      */
-    private String[] cars;
+    void emptyGarage();
     /**
-     * The number of cars in the garage.
+     * Reports whether the garage is full.
+     * @param garage the garage to check
+     * @return true if the garage is full, false otherwise
+     * @ensures isFull = (|garage| = garage.capacity())
      */
-    private int count;
+    boolean isFull(Garage garage);
+    /**
+     * Reports the number of cars in the garage.
+     * @return the number of cars in the garage
+     * @ensures count = |this|
+     */
+    int count();
+    /**
+     * Reports the car at the given index.
+     * @param index the index of the car to report
+     * @return the car at the given index
+     * @requires 0 <= index < |this|
+     * @ensures carAt = this[index]
+     */
+    String carAt(int index);
+    /**
+     * Reports the index of the given car.
+     * @param car the car to find
+     * @return the index of the given car, or -1 if the car is not in the garage
+     * @ensures indexOf = (if car is in this then the index of car in this else -1)
+     */
+    int indexOf(String car);
+    /**
+     * Swaps the cars at the given indices.
+     * @param index1 the index of the first car
+     * @param index2 the index of the second car
+     * @updates this
+     * @requires 0 <= index1 < |this| and 0 <= index2 < |this|
+     * @ensures this = #this[ index1 := @this[index2] and index2 := @this[index1] ]
+     */
+    void swapCars(int index1, int index2);
+    /**
+     * Reverses the order of the cars in the garage.
+     * @updates this
+     * @ensures this = rev(this)
+     */
+    void reverseCars();
 
-    /**
-     * Constructs a new {@code Garage} object with the given size.
-     * @param size the size of the garage
-     */
-    public Garage(int size) {
-        this.cars = new String[size];
-        this.count = 0;
-    }
-
-    /**
-     * Adds a String to the garage.
-     * @param carToAdd the String to be added
-     */
-    public void addCar(String carToAdd) {
-        if (this.count < this.cars.length) {
-            this.cars[this.count] = carToAdd;
-            this.count++;
-        }
-    }
-
-    /**
-     * Empties the garage.
-     */
-    public void emptyGarage() {
-        for (int i = 0; i < this.count; i++) {
-            this.cars[i] = "";
-        }
-        this.count = 0;
-    }
-
-    /**
-     * Removes a String from the garage.
-     * @param carToRemove the car to be removed
-     */
-    public void removeCar(String carToRemove) {
-        for (int i = 0; i < this.count; i++) {
-            if (this.cars[i].equals(carToRemove)) {
-                this.cars[i] = this.cars[this.count - 1];
-                this.cars[this.count - 1] = null;
-                this.count--;
-                break;
-            }
-        }
-    }
-    /**
-     * Main method to test the {@code Garage} class.
-     * @param args the command-line arguments
-     */
-    public static void main(String[] args) {
-        final int garageSize = 5;
-        Garage garage = new Garage(garageSize);
-        garage.addCar("Toyota");
-        garage.addCar("Mercedes");
-        garage.addCar("Audi");
-        garage.removeCar("BMW");
-        garage.removeCar("Audi");
-        garage.addCar("Ford");
-        garage.emptyGarage();
-    }
 }
