@@ -24,8 +24,7 @@ the following form: YYYY.0M.0D.
 
 ### Added
 
-- Created an interface for the kernel component
-- Created an enhanced interface
+- Created kernel and enhanced interfaces for Garage Component
 
 ### Updated
 
