@@ -1,8 +1,8 @@
 # Portfolio Part 2: Component Proof-of-Concept
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Mark Youssef
+- **Dot Number**: youssef.74
+- **Due Date**: 2/20/2025
 
 ## Assignment Overview
 
@@ -73,7 +73,7 @@ project. Specifically, students should be able to:
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
 are meant to provide ongoing feedback in the learning process. Therefore,
-the rubric is designed to assess the learning objectives *directly* in a way
+the rubric is designed to assess the learning objectives _directly_ in a way
 that is low stakes—meaning you shouldn't have to worry about the grade. Just
 do good work.
 
@@ -114,8 +114,7 @@ Below is further rationale/explanation for the rubric items above:
 > to create a new design. In you do end up picking one at random, you should
 > disclose that here as well.
 
-<!-- TODO: briefly argue your choice of design or design something
-new; then delete this comment -->
+I chose to go with my garage class idea because I think it is the one I am most interested in and one that fits the model idea the best. I will modify it though from using a car class to manipulating arrays/properties.
 
 > Once you've argued your choice of design, make a branch in your new repo called
 > something like `proof-of-concept`. There are many ways to do this, but my
@@ -125,8 +124,6 @@ new; then delete this comment -->
 > VSCode to run git commands. It's entirely up to you. Regardless of your choice,
 > we'll want a branch that you can later make a pull request from with all
 > your changes.
-
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
@@ -177,7 +174,6 @@ the following form: YYYY.0M.0D.
 ### Updated
 
 - Changed design to include ...
-
 ```
 
 Here `YYYY.MM.DD` would be the date of your submission, such as 2024.04.21.
@@ -187,8 +183,6 @@ like to accomplish that, you will need to make GitHub releases after each pull
 request merge (or at least tag your commits). This is not required.
 
 ### Submission
-
-<!-- TODO: read the submission instructions then delete this comment -->
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull
@@ -210,8 +204,6 @@ recommend keeping the pull request open until at least a peer has had a chance
 to look over your changes. Otherwise, you defer needed changes to later pull
 requests, which could sacrifice the overall quality of your work or result in
 major rework.
-
-<!-- TODO: paste the URL to Carmen then delete this comment -->
 
 ### Peer Review
 
