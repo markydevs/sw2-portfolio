@@ -20,17 +20,7 @@ public interface GarageKernel extends Standard<Object> {
      * @ensures this does not contain carToRemove
      */
     void removeCar(String carToRemove);
-    /**
-     * Reports the car at the given index.
-     * @param index the index of the car to retrieve
-     * @return the car at the specified index
-     */
-    String carAt(int index);
-    /**
-     * Reports the number of cars in the garage.
-     * @return the count of cars in the garage
-     */
-    int count();
+
     /**
      * Reports the size of the garage.
      * @return the size of the garage
