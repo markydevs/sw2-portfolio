@@ -17,20 +17,6 @@ public interface Garage extends GarageKernel {
      */
     boolean isFull(Garage garage);
     /**
-     * Reports the number of cars in the garage.
-     * @return the number of cars in the garage
-     * @ensures count = |this|
-     */
-    int count();
-    /**
-     * Reports the car at the given index.
-     * @param index the index of the car to report
-     * @return the car at the given index
-     * @requires 0 <= index < |this|
-     * @ensures carAt = this[index]
-     */
-    String carAt(int index);
-    /**
      * Reports the index of the given car.
      * @param car the car to find
      * @return the index of the given car, or -1 if the car is not in the garage
@@ -51,6 +37,7 @@ public interface Garage extends GarageKernel {
      * @updates this
      * @ensures this = rev(this)
      */
+
     void reverseCars();
 
 }
