@@ -37,6 +37,7 @@ public interface Garage extends GarageKernel {
      * @updates this
      * @ensures this = rev(this)
      */
+
     void reverseCars();
 
 }

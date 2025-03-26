@@ -37,5 +37,4 @@ public interface GarageKernel extends Standard<Object> {
      * @ensures capacity = |this|
      */
     int capacity();
-
  }
