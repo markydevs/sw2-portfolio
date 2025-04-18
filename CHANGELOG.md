@@ -55,6 +55,9 @@ the following form: YYYY.0M.0D.
 - Designed test suite for Garage component
 - Designed two different use cases for Garage component
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 [unreleased]: https://github.com/jrg94/portfolio-project/compare/v2024.08.07...HEAD
 [2024.08.07]: https://github.com/jrg94/portfolio-project/compare/v2024.01.07...v2024.08.07
