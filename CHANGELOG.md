@@ -40,6 +40,23 @@ the following form: YYYY.0M.0D.
 
 - Changed design to include count and carAt in kernel methods instead of interface
 
+## [2025.04.09]
+
+### Added
+
+- Designed kernel implementation for Garage component
+
+## [2025.04.17]
+
+### Added
+
+- Designed test suite for Garage component
+- Designed two different use cases for Garage component
+
+### Updated
+
+- Fixed equals, swapCars and reverseCars. They were failing tests and were not implemented properly.
+
 [unreleased]: https://github.com/jrg94/portfolio-project/compare/v2024.08.07...HEAD
 [2024.08.07]: https://github.com/jrg94/portfolio-project/compare/v2024.01.07...v2024.08.07
 [2024.01.07]: https://github.com/jrg94/portfolio-project/releases/tag/v2024.01.07

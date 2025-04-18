@@ -141,8 +141,6 @@ to see them. If you don't like this workflow, you may try following the
 rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
 
-<!-- TODO: make a new branch from main then delete this comment -->
-
 ## Assignment Tasks
 
 Your primary task for this assignment is to polish up your code and get it
@@ -307,18 +305,18 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+I think I understand software development better because I understand how much thought goes into each component and building every layer of a component showed me how there’s no “wizardry,” only carefully reasoned trade‑offs.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+The portfolio project revealed to me that I had gaps in my understanding of kernel implmentations on a deeper level, like I did not realize how implementing on a data structure like sequence would take more thought than being randomly chosen.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+I will say I enjoy software development but it did change my expectations in that it revealed a deeper meticulous layer to it that I find myself finding fun to parse.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -326,29 +324,32 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+Skills I picked up through the process include implementing classes using foundational data structures, thinking of about practical proofs of concept before when I am coding and following the tree of how a component is like creating a secondary class and abstract class.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+Implemented complex data structures and object-oriented design patterns to create reusable software components
+Designed and developed abstract classes and interfaces following rigorous software engineering principles
+Created comprehensive unit test suites to ensure code reliability and maintainability
+Applied proof-of-concept methodology to validate software designs before implementation
+Utilized version control (Git) and collaborative development practices through GitHub
+Documented code thoroughly using JavaDoc and design-by-contract principles
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+I think I am still interested in software development but I am curious how this type of scrupulouisty is carried out in like web development and other sectors. For now, I enjoy creatively doing web development and it seems pretty free to me.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+I think my next steps would be to build a portfolio of web projects incorporating good software engineering practices, learn about web architecture and design patterns, study testing frameworks for web development. Some potential mentors include maybe professors for web dev courses, local tech meetup at club people who work in the relevant area.
 
 ### Changelog
-
-<!-- TODO: update CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -373,7 +374,6 @@ the following form: YYYY.0M.0D.
 ### Updated
 
 - Changed design to include ...
-
 ```
 
 Here `YYYY.MM.DD` would be the date of your submission, such as 2024.04.21.
@@ -383,8 +383,6 @@ like to accomplish that, you will need to make GitHub releases after each pull
 request merge (or at least tag your commits). This is not required.
 
 ### Submission
-
-<!-- TODO: read the submission instructions then delete this comment -->
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull
@@ -435,7 +433,5 @@ PDF to read this rubric as a table).
 If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
-
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [survey]: https://forms.gle/dumXHo6A4Enucdkq9
