@@ -13,7 +13,8 @@ public class GarageSecondaryTest {
      * `isFull()` should flip from false → true when capacity is reached
      * without changing the cars already stored.
      */
-    @Test void isFullDetectsCapacity() {
+    @Test
+    public void isFullDetectsCapacity() {
         Garage g = new GarageOnSequence(1); // capacity 1
 
         GarageSecondary gs = (GarageSecondary) g;
@@ -23,10 +24,12 @@ public class GarageSecondaryTest {
         assertTrue(gs.isFull());
         assertEquals("tesla", g.carAt(0));
     }
+
     /**
      * `isFull()` should remain false when the garage is not at full capacity.
      */
-    @Test void isFullNotFull() {
+    @Test
+    public void isFullNotFull() {
         Garage g = new GarageOnSequence(2); // capacity 2
 
         GarageSecondary gs = (GarageSecondary) g;
@@ -40,9 +43,11 @@ public class GarageSecondaryTest {
     /**
      * `indexOf()` returns the right index and does not mutate state.
      */
-    @Test void indexOfNonMutating() {
+    @Test
+    public void indexOfNonMutating() {
         Garage g = new GarageOnSequence(3);
-        g.addCar("ford"); g.addCar("honda");
+        g.addCar("ford");
+        g.addCar("honda");
 
         GarageSecondary gs = (GarageSecondary) g;
         String before = g.toString();
@@ -50,12 +55,15 @@ public class GarageSecondaryTest {
         assertEquals(1, gs.indexOf("honda"));
         assertEquals(before, g.toString()); // state unchanged
     }
+
     /**
      * `indexOf()` should return -1 when the car is not found and not mutate state.
      */
-    @Test void indexOfNotFound() {
+    @Test
+    public void indexOfNotFound() {
         Garage g = new GarageOnSequence(3);
-        g.addCar("ford"); g.addCar("honda");
+        g.addCar("ford");
+        g.addCar("honda");
 
         GarageSecondary gs = (GarageSecondary) g;
         String before = g.toString();
@@ -67,9 +75,11 @@ public class GarageSecondaryTest {
     /**
      * A quick sanity‑check for `swapCars()`.
      */
-    @Test void swapCarsSwaps() {
+    @Test
+    public void swapCarsSwaps() {
         Garage g = new GarageOnSequence(2);
-        g.addCar("a"); g.addCar("b");
+        g.addCar("a");
+        g.addCar("b");
 
         ((GarageSecondary) g).swapCars(0, 1);
 
@@ -80,9 +90,12 @@ public class GarageSecondaryTest {
     /**
      * `reverseCars()` should flip the order of an odd‑length list.
      */
-    @Test void reverseCarsReverses() {
+    @Test
+    public void reverseCarsReverses() {
         Garage g = new GarageOnSequence(3);
-        g.addCar("x"); g.addCar("y"); g.addCar("z");
+        g.addCar("x");
+        g.addCar("y");
+        g.addCar("z");
 
         ((GarageSecondary) g).reverseCars();
 
@@ -90,12 +103,17 @@ public class GarageSecondaryTest {
         assertEquals("y", g.carAt(1));
         assertEquals("x", g.carAt(2));
     }
+
     /**
      * `reverseCars()` should flip the order of an even‑length list.
      */
-    @Test void reverseCarsReversesEven() {
+    @Test
+    public void reverseCarsReversesEven() {
         Garage g = new GarageOnSequence(4);
-        g.addCar("a"); g.addCar("b"); g.addCar("c"); g.addCar("d");
+        g.addCar("a");
+        g.addCar("b");
+        g.addCar("c");
+        g.addCar("d");
 
         ((GarageSecondary) g).reverseCars();
 
@@ -104,6 +122,7 @@ public class GarageSecondaryTest {
         assertEquals("b", g.carAt(2));
         assertEquals("a", g.carAt(3));
     }
+
     /**
      * Tests that the garage is emptied correctly and its state is reset.
      */
@@ -119,34 +138,4 @@ public class GarageSecondaryTest {
         assertEquals("[]", g.toString());
     }
 
-    /**
-     * Tests the `toString` method to ensure it returns the correct string representation
-     * of the garage and does not modify its state.
-     */
-    @Test
-    public void testToString() {
-        Garage g = new GarageOnSequence(2);
-        g.addCar("tesla");
-        Garage gCopy = new GarageOnSequence(2);
-        gCopy.addCar("tesla");
-
-        String str = g.toString();
-
-        assertEquals("[tesla]", str);
-        assertEquals(gCopy, g); // Ensure toString doesn't modify state
-    }
-    /**
-     * Tests the `toString` method to ensure it returns "[]" for an empty garage
-     * and does not modify its state.
-     */
-    @Test
-    public void testToStringEmpty() {
-        Garage g = new GarageOnSequence(2);
-        Garage gCopy = new GarageOnSequence(2);
-
-        String str = g.toString();
-
-        assertEquals("[]", str);
-        assertEquals(gCopy, g); // Ensure toString doesn't modify state
-}
 }

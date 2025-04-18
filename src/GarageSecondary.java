@@ -29,21 +29,27 @@ public abstract class GarageSecondary implements Garage {
      * @return true if the specified object is equal to this garage, false otherwise
      */
     @Override
-    public boolean equals(Object obj) {
-        boolean result = false;
-        if (this == obj) {
-            GarageSecondary g = (GarageSecondary) obj;
-            if (this.count() == g.count()) {
-                result = true;
-                for (int i = 0; i < this.count(); i++) {
-                    if (!this.carAt(i).equals(g.carAt(i))) {
-                        result = false;
-                    }
-                }
-            }
-        }
-        return result;
+public boolean equals(Object obj) {
+    if (this == obj) {                 // identical references
+        return true;
     }
+    if (!(obj instanceof Garage)) {    // null or wrong type
+        return false;
+    }
+
+    Garage other = (Garage) obj;
+
+    if (this.count() != other.count()) {
+        return false;
+    }
+    for (int i = 0; i < this.count(); i++) {
+        if (!this.carAt(i).equals(other.carAt(i))) {
+            return false;
+        }
+    }
+    return true;
+}
+
     /**
      * Returns a hash code value for the garage.
      * @return a hash code value for the garage
@@ -73,11 +79,12 @@ public abstract class GarageSecondary implements Garage {
      * Subclasses should not override this method to ensure consistent behavior.
      */
     @Override
-    public final void emptyGarage() {
-        while (this.capacity() > 0) {
-            this.removeCar(this.carAt(0));
-        }
+public final void emptyGarage() {
+    while (this.count() > 0) {
+        this.removeCar(this.carAt(0));
     }
+}
+
 
     /**
      * Reports whether the garage is full.
@@ -110,11 +117,15 @@ public abstract class GarageSecondary implements Garage {
      */
     @Override
     public final void swapCars(int index1, int index2) {
-        String temp = this.carAt(index1);
-        this.removeCar(this.carAt(index1));
-        this.addCar(this.carAt(index2));
-        this.removeCar(this.carAt(index2));
-        this.addCar(temp);
+        // Get both cars first
+        String car1 = this.carAt(index1);
+        String car2 = this.carAt(index2);
+
+        // Remove and add in reverse order
+        this.removeCar(car1);
+        this.removeCar(car2);
+        this.addCar(car2);
+        this.addCar(car1);
     }
 
     /**
@@ -122,9 +133,20 @@ public abstract class GarageSecondary implements Garage {
      */
     @Override
     public final void reverseCars() {
-        int count = this.count();
-        for (int i = 0; i < count / 2; i++) {
-            this.swapCars(i, count - i - 1);
+        int size = this.count();
+        String[] tempCars = new String[size];
+
+        // Store all cars in temp array
+        for (int i = 0; i < size; i++) {
+            tempCars[i] = this.carAt(i);
+        }
+
+        // Empty the garage
+        this.emptyGarage();
+
+        // Add cars back in reverse order
+        for (int i = size - 1; i >= 0; i--) {
+            this.addCar(tempCars[i]);
         }
     }
 }

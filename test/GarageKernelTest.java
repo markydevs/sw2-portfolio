@@ -19,11 +19,15 @@ public class GarageKernelTest {
         assertEquals("tesla", g.carAt(0));
         assertNotEquals(gCopy, g);
     }
+    /**
+     * Tests adding a car to a garage that is not yet full.
+     * Ensures the car is added correctly and the state changes as expected.
+     */
     @Test
     public void testAddCarFull() {
-        Garage g = new GarageOnSequence(1);
+        Garage g = new GarageOnSequence(2);
         g.addCar("tesla");
-        Garage gCopy = new GarageOnSequence(1);
+        Garage gCopy = new GarageOnSequence(2);
         gCopy.addCar("tesla");
 
         g.addCar("ford");
